@@ -23,9 +23,11 @@ jobs:
         run: mcp-publisher login github-oidc
 
       - name: Publish Google Ads Transparency MCP
+        continue-on-error: true
         run: mcp-publisher publish google-ads-transparency/server.json
 
       - name: Publish Tech Stack & Ad Pixel Detector MCP
+        continue-on-error: true
         run: mcp-publisher publish tech-stack-ad-pixels/server.json
 
       - name: Publish Unified 6-ATS Jobs & Hiring Intelligence MCP
