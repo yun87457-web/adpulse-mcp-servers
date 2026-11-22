@@ -40,6 +40,22 @@ Browserless Go engine (zero-copy Aho-Corasick DFA, `256MB` RAM) detecting **180+
 
 ---
 
+## 3. Unified 6-ATS Jobs, Salary & Hiring Intelligence MCP Server (`v1.0.2`)
+
+Browserless Go engine unifying **6 major ATS platforms** (`Ashby`, `Greenhouse`, `Lever`, `SmartRecruiters`, `Workday`, `BambooHR`) behind a single input (`stripe.com`, `ceo@ramp.com`, career URLs, or slugs) with `<400ms` ATS auto-detection, normalized salary/equity bands, workplace/seniority classification, **115+ JD tech-stack signals**, `summaryMode` company hiring rollups, and `onlyNewJobs` incremental monitoring.
+
+- **Remote MCP URL (Streamable HTTP):** `https://spiky-closet--ats-jobs-hiring-intel.apify.actor/mcp`
+- **Apify Store:** https://apify.com/spiky_closet/ats-jobs-hiring-intel
+
+### Tools Exposed
+| Tool | Description |
+| :--- | :--- |
+| `get_company_jobs` | Fetch normalized open jobs across 6 ATS platforms from domains, emails, URLs, or slugs with remote/salary/department/tech filters. |
+| `detect_company_ats` | Auto-detect which ATS platform and board slug a company uses in `<400ms`. |
+| `screen_hiring_signals` | Batch-screen companies into 1 summary row per company (`totalOpenJobs`, `medianSalaryUsd`, `remotePct`, `topJdTechSignals`). |
+
+---
+
 ## Quick Setup (Claude Code, Claude Desktop, Cursor, VS Code)
 
 Both remote servers authenticate using your standard Apify API token (`Authorization: Bearer <APIFY_TOKEN>`).
