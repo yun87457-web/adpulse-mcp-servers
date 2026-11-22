@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.yun87457-web/tech-stack-ad-pixel-detector-mcp",
   "title": "Website Tech Stack, Ad Pixels & SaaS Detector MCP Server",
-  "description": "Browserless Go MCP server detecting 180+ website technologies, unpacking static Google Tag Manager (gtm.js) containers for consent-gated ad pixel IDs (Google Ads AW-, Meta, LinkedIn, TikTok, Bing, GA4), and verifying 70+ internal enterprise SaaS tools via public DNS.",
+  "description": "Browserless Go MCP: 180+ web techs, static GTM ad-pixel IDs (Meta/AW/GA4) & 70+ DNS SaaS checks.",
   "repository": {
     "url": "https://github.com/yun87457-web/adpulse-mcp-servers",
     "source": "github"
