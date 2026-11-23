@@ -1,5 +1,7 @@
 # Google Ads Transparency & Creative Spy — REST API & MCP Server
 
+[![Google Ads Transparency MCP connector](https://glama.ai/mcp/connectors/io.github.yun87457-web/google-ads-transparency-mcp/badges/score.svg)](https://glama.ai/mcp/connectors/io.github.yun87457-web/google-ads-transparency-mcp)
+
 Query active Google Search, YouTube, and Display ad creatives, formats, advertiser details, and EU DSA reach/impression bounds by domain or advertiser name — without headless browsers or proxies.
 
 ## Access Channels

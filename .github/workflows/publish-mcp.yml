@@ -35,4 +35,5 @@ jobs:
         run: mcp-publisher publish ats-jobs-hiring-intel/server.json
 
       - name: Publish Website Contacts, Pricing & LLM Brief MCP
+        continue-on-error: true
         run: mcp-publisher publish website-contacts-pricing-intel/server.json

@@ -1,5 +1,7 @@
 # Website Contacts, Socials, Pricing & LLM Brief — REST API & MCP Server
 
+[![Website Contacts, Pricing & LLM Brief MCP connector](https://glama.ai/mcp/connectors/io.github.yun87457-web/website-contacts-pricing-intel-mcp/badges/score.svg)](https://glama.ai/mcp/connectors/io.github.yun87457-web/website-contacts-pricing-intel-mcp)
+
 Extract verified emails (with role classification), phone numbers, `12+` social profiles, SaaS `/pricing` tiers & PLG flags, DNS `MX`/`SPF` email provider signals, and `/llms.txt` or clean Markdown company briefs from any company domain or work email.
 
 ## Access Channels
