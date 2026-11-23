@@ -49,3 +49,11 @@ curl -sG "https://google-ads-transparency-creative-spy.p.rapidapi.com/search" \
   -H "x-rapidapi-key: YOUR_RAPIDAPI_KEY" \
   -H "x-rapidapi-host: google-ads-transparency-creative-spy.p.rapidapi.com"
 ```
+
+## Free n8n Workflow Template
+
+Import the ready-to-run workflow (**Weekly Competitor Google Ads & EU DSA Creative Monitor**): [`n8n-template.json`](./n8n-template.json)
+
+1. Download [`n8n-template.json`](./n8n-template.json) and click **Import from File** in n8n.
+2. Add a Generic Header Auth credential (`x-rapidapi-key`) using your free RapidAPI key.
+3. Replace the sample domain list and connect your Slack channel.

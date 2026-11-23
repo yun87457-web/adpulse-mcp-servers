@@ -48,3 +48,11 @@ curl -s -X POST "https://unified-multi-ats-jobs-salary-hiring-intelligence.p.rap
   -H "Content-Type: application/json" \
   -d '{"companies": ["ramp.com", "datadoghq.com", "stripe.com"]}'
 ```
+
+## Free n8n Workflow Template
+
+Import the ready-to-run workflow (**Weekly 6-ATS Hiring Velocity, Salary & JD Tech Signal Monitor**): [`n8n-template.json`](./n8n-template.json)
+
+1. Download [`n8n-template.json`](./n8n-template.json) and click **Import from File** in n8n.
+2. Add a Generic Header Auth credential (`x-rapidapi-key`) using your free RapidAPI key.
+3. Replace the sample domain list and connect your Slack channel.

@@ -47,3 +47,11 @@ curl -sG "https://website-contacts-socials-pricing-llm-brief-api.p.rapidapi.com/
   -H "x-rapidapi-key: YOUR_RAPIDAPI_KEY" \
   -H "x-rapidapi-host: website-contacts-socials-pricing-llm-brief-api.p.rapidapi.com"
 ```
+
+## Free n8n Workflow Template
+
+Import the ready-to-run workflow (**B2B Domain Contacts, SaaS /pricing & /llms.txt Brief Enricher**): [`n8n-template.json`](./n8n-template.json)
+
+1. Download [`n8n-template.json`](./n8n-template.json) and click **Import from File** in n8n.
+2. Add a Generic Header Auth credential (`x-rapidapi-key`) using your free RapidAPI key.
+3. Replace the sample domain list and connect your Slack channel.
