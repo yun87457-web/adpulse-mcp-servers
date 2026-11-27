@@ -22,18 +22,31 @@ jobs:
       - name: Login via GitHub OIDC
         run: mcp-publisher login github-oidc
 
-      - name: Publish Google Ads Transparency MCP
-        continue-on-error: true
-        run: mcp-publisher publish google-ads-transparency/server.json
+      - name: Publish all 5 MCP server manifests (idempotent on already-published versions)
+        run: |
+          set -euo pipefail
+          publish_if_new() {
+            local manifest="$1"
+            echo "==> Publishing ${manifest}"
+            set +e
+            out=$(mcp-publisher publish "${manifest}" 2>&1)
+            rc=$?
+            set -e
+            echo "${out}"
+            if [ "${rc}" -eq 0 ]; then
+              echo "Published ${manifest}"
+              return 0
+            fi
+            if echo "${out}" | grep -qiE "already exists|duplicate version"; then
+              echo "Skipping ${manifest}: version already published in Official MCP Registry."
+              return 0
+            fi
+            echo "ERROR: publish failed for ${manifest} (exit ${rc})"
+            return "${rc}"
+          }
 
-      - name: Publish Tech Stack & Ad Pixel Detector MCP
-        continue-on-error: true
-        run: mcp-publisher publish tech-stack-ad-pixels/server.json
-
-      - name: Publish Unified 6-ATS Jobs & Hiring Intelligence MCP
-        continue-on-error: true
-        run: mcp-publisher publish ats-jobs-hiring-intel/server.json
-
-      - name: Publish Website Contacts, Pricing & LLM Brief MCP
-        continue-on-error: true
-        run: mcp-publisher publish website-contacts-pricing-intel/server.json
+          publish_if_new "google-ads-transparency/server.json"
+          publish_if_new "tech-stack-ad-pixels/server.json"
+          publish_if_new "ats-jobs-hiring-intel/server.json"
+          publish_if_new "website-contacts-pricing-intel/server.json"
+          publish_if_new "sec-edgar-funding-insider/server.json"

@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.yun87457-web/sec-edgar-funding-insider-mcp",
-  "title": "FilingSignal \u2014 SEC Form D Startup Funding, Form 4 Insider & 8-K MCP",
+  "title": "FilingSignal — SEC Form D Startup Funding, Form 4 Insider & 8-K MCP",
   "description": "6-tool SEC EDGAR MCP: Form D startups (SPV-filtered), Form 4 VWAP/cluster buys & 8-K EX-99.1.",
   "repository": {
     "url": "https://github.com/yun87457-web/sec-edgar-funding-insider-mcp",
@@ -17,6 +17,24 @@
           "name": "Authorization",
           "description": "Apify Bearer token (Bearer <YOUR_APIFY_TOKEN>)",
           "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "filingsignal-sec-edgar-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "APIFY_TOKEN",
+          "description": "Optional Apify API token for full batch & MCP quota (works keyless in free trial mode)",
+          "isRequired": false,
           "isSecret": true
         }
       ]
